@@ -28,6 +28,12 @@ body {
   cursor: pointer;
 }
 
+.modal {
+  padding: 20px;
+  background: #eee;
+  margin-top: 20px;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

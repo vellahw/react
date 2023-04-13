@@ -35,8 +35,23 @@ function App() {
         <p>홀홀홀...</p>
         <hr/>
       </div>
+
+      {/* 컴포넌트 사용 */}
+      <Modal />
+
     </div>
   );
+}
+
+//Component 생성
+function Modal() {
+  return(
+    <div className='modal'>
+        <h2>제목</h2>
+        <p>날짜</p>
+        <p>상세내용</p>
+    </div>
+  )
 }
 
 export default App;
