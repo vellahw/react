@@ -10,12 +10,21 @@ function App() {
     newTitles[0] = '불고기 만들기';
     willUpdateTitle(newTitles);
   }  
+
+  function sort() {
+    var newTitles = [...titles];
+    newTitles = newTitles.sort(); 
+    willUpdateTitle(newTitles);
+  }
+
   return (
     <div className="App">
       <div className="black-nav">
         <div>My Blog</div>
       </div>
+
       <div className='list'>
+      <button onClick={ sort }>클릭하면 정렬됨</button>
         <h3>{ titles[0] } <span className='heart' onClick={()=>{ willUpdateCount(count+1) }}>❤︎</span> {count} </h3> 
         <p>홀홀홀...</p>
         <hr/>
@@ -26,7 +35,6 @@ function App() {
         <p>홀홀홀...</p>
         <hr/>
       </div>
-      <button onClick={ updateTitle }>클릭하면 글 제목 변경</button>
     </div>
   );
 }
