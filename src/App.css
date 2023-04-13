@@ -16,6 +16,16 @@ body {
   font-weight: 600;
 }
 
+.title {
+  padding-left: 50px;
+}
+
+.profile {
+ padding-right: 70px;
+ position: absolute;
+ right: 0;
+}
+
 .list {
   text-align: left;
   margin-top: 30px;

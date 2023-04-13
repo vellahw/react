@@ -20,7 +20,8 @@ function App() {
   return (
     <div className="App">
       <div className="black-nav">
-        <div>My Blog</div>
+        <div className='title'>vellalog</div>
+        <div className='profile'>profile</div>
       </div>
 
       <div className='list'>
