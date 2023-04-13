@@ -25,7 +25,7 @@ function App() {
       </div>
 
       <div className='btnDiv'>
-        <button className='sortBtn' onClick={ sort }>가나다 ↓</button>
+        <button className='sortBtn' onClick={ sort }>가나다 ⬇</button>
       </div>
       
       <div className='list'>

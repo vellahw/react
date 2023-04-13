@@ -33,6 +33,21 @@ body {
   margin-top: 30px;
 }
 
+.sortBtn {
+  border: 1px solid rgba(55, 53, 47, 0.16);
+  border-radius: 15px;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: rgba(55, 53, 47, 0.65);;
+  padding: 5px 8px 5px 8px;
+}
+
+.sortBtn:hover {
+  background: #eee;
+}
+
 .list {
   text-align: left;
   margin-top: 30px;
@@ -42,14 +57,6 @@ body {
 
 .heart {
   font-size: 20px;
-  cursor: pointer;
-}
-
-.sortBtn {
-  border: none;
-  background-color: #fff;
-  font-size: 15px;
-  font-weight: 600;
   cursor: pointer;
 }
 
