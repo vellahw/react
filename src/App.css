@@ -40,7 +40,7 @@ body {
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  color: rgba(55, 53, 47, 0.65);;
+  color: rgba(55, 53, 47, 0.65);
   padding: 5px 8px 5px 8px;
 }
 
@@ -56,8 +56,20 @@ body {
 }
 
 .heart {
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
+  padding-left: 10px;
+  color: rgba(55, 53, 47, 0.65);
+}
+
+.heart:hover {
+  color: palevioletred;
+}
+
+.heartCount {
+  font-size: 15px;
+  padding-left: 10px;
+  color: rgba(55, 53, 47, 0.65);
 }
 
 .modal {

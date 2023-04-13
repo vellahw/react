@@ -29,7 +29,10 @@ function App() {
       </div>
       
       <div className='list'>
-        <h3>{ titles[0] } <span className='heart' onClick={()=>{ willUpdateCount(count+1) }}>❤︎</span> {count} </h3> 
+        <h3>{ titles[0] }
+          <span className='heart' onClick={()=>{ willUpdateCount(count+1) }}>❤︎ 공감</span>
+          <span className='heartCount'>{count}</span>
+        </h3> 
         <p>홀홀홀...</p>
         <hr/>
         <h3>{ titles[1] }</h3> 
