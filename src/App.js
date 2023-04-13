@@ -24,8 +24,11 @@ function App() {
         <div className='profile'>profile</div>
       </div>
 
+      <div className='btnDiv'>
+        <button className='sortBtn' onClick={ sort }>가나다 ↓</button>
+      </div>
+      
       <div className='list'>
-      <button onClick={ sort }>클릭하면 정렬됨</button>
         <h3>{ titles[0] } <span className='heart' onClick={()=>{ willUpdateCount(count+1) }}>❤︎</span> {count} </h3> 
         <p>홀홀홀...</p>
         <hr/>
