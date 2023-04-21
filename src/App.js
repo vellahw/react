@@ -26,6 +26,7 @@ function App() {
 
       <div className='btnDiv'>
         <button className='sortBtn' onClick={ sort }>가나다 ⬇</button>
+        <button className='updateTitleBtn' onClick={ updateTitle }>불고기</button>
       </div>
       
       <div className='list'>
@@ -34,31 +35,47 @@ function App() {
           <span className='heartCount'>{count}</span>
         </h3> 
         <p>홀홀홀...</p>
+        
+        <Modal title={titles[0]} />
+
         <hr/>
         <h3>{ titles[1] }</h3> 
         <p>홀홀홀...</p>
+        <Modal title={titles[1]} />
         <hr/>
         <h3>{ titles[2] }</h3> 
         <p>홀홀홀...</p>
+        <Modal title={titles[2]} />
         <hr/>
       </div>
 
-      {/* 컴포넌트 사용 */}
-      <Modal />
 
     </div>
   );
 }
 
-//Component 생성
-function Modal() {
-  return(
+// //Component 생성
+// function Modal(props) {
+//   return(
+//     <div className='modal'>
+//         <h2>{props.title}</h2>
+//         <p>홀홀홀...</p>
+//         <p>리액트를 찍먹해봅시다...</p>
+//     </div>
+//   )
+// }
+
+class Modal extends React.Component {
+  render() {
+    return(
     <div className='modal'>
-        <h2>제목</h2>
-        <p>날짜</p>
-        <p>상세내용</p>
+      <h2>{this.props.title}</h2>
+      <p>홀홀홀...</p>
+      <p>리액트를 찍먹해봅시다...</p>
     </div>
-  )
+    );
+  }
 }
 
 export default App;
+

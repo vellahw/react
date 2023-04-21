@@ -48,6 +48,22 @@ body {
   background: #eee;
 }
 
+.updateTitleBtn {
+  border: 1px solid rgba(55, 53, 47, 0.16);
+  border-radius: 15px;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: rgba(55, 53, 47, 0.65);
+  padding: 5px 10px 6px 10px;
+  margin-left: 5px;
+}
+
+.updateTitleBtn:hover {
+  background: #eee;
+}
+
 .list {
   text-align: left;
   margin-top: 30px;
@@ -76,4 +92,5 @@ body {
   padding: 20px;
   background: #eee;
   margin-top: 20px;
+  text-align: left;
 }
