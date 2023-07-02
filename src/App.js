@@ -36,12 +36,6 @@ function App() {
     willUpdateTitle(newTitles);
   }
 
-  // const updateTitle = (bulgogi)=>{
-  //   var newTitles = [...titles]; //Deep Copy
-  //   newTitles[0] = '불고기 만들기';
-  //   willUpdateTitle(newTitles);
-  // };
-
   return (
     <div className="App">
       <div className="black-nav">
