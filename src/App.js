@@ -36,6 +36,12 @@ function App() {
     willUpdateTitle(newTitles);
   }
 
+  // const updateTitle = (bulgogi)=>{
+  //   var newTitles = [...titles]; //Deep Copy
+  //   newTitles[0] = '불고기 만들기';
+  //   willUpdateTitle(newTitles);
+  // };
+
   return (
     <div className="App">
       <div className="black-nav">
@@ -44,8 +50,8 @@ function App() {
       </div>
 
       <div className='btnDiv'>
-        <SortButton>가나다 ⬇</SortButton>
-        <UpdateTitleButton>불고기</UpdateTitleButton>
+        <SortButton onClick={ sort }>가나다 ⬇</SortButton>
+        <UpdateTitleButton onClick={ updateTitle }>불고기</UpdateTitleButton>
         {/* <button className='sortBtn' onClick={ sort }>가나다 ⬇</button>
         <button className='updateTitleBtn' onClick={ updateTitle }>불고기</button> */}
       </div>
