@@ -1,5 +1,24 @@
 import React, { useState } from 'react';
 import './App.css';
+// styled-components 로드
+import styled from 'styled-components';
+
+const SortButton = styled.button`
+  border: 1px solid rgba(55, 53, 47, 0.16);
+  border-radius: 15px;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: rgba(55, 53, 47, 0.65);
+  padding: 5px 8px 5px 8px;
+  margin-right: 5px;
+  &:hover{
+    background-color: #eee;
+  }
+`;
+
+const UpdateTitleButton = styled(SortButton)``;
 
 function App() {
   let [titles, willUpdateTitle] = useState(['블로그 만들기', '리액트다아', '호롤롤롤']);
@@ -25,8 +44,10 @@ function App() {
       </div>
 
       <div className='btnDiv'>
-        <button className='sortBtn' onClick={ sort }>가나다 ⬇</button>
-        <button className='updateTitleBtn' onClick={ updateTitle }>불고기</button>
+        <SortButton>가나다 ⬇</SortButton>
+        <UpdateTitleButton>불고기</UpdateTitleButton>
+        {/* <button className='sortBtn' onClick={ sort }>가나다 ⬇</button>
+        <button className='updateTitleBtn' onClick={ updateTitle }>불고기</button> */}
       </div>
       
       <div className='list'>
