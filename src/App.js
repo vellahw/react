@@ -25,6 +25,18 @@ class Modal extends React.Component {
   }
 }
 
+function Content() {
+  return (
+    <div>
+        <h3>제목
+          <span className='heart'>❤︎ 공감</span>
+          <span className='heartCount'>1</span>
+        </h3> 
+        <p>내용...</p>
+    </div>
+  )
+}
+
 const SortButton = styled.button`
   border: 1px solid rgba(55, 53, 47, 0.16);
   border-radius: 15px;
@@ -78,6 +90,7 @@ function App() {
       <ButtonDiv></ButtonDiv>
       
       <div className='list'>
+        <Content></Content>
         <h3>{ titles[0] }
           <span className='heart' onClick={()=>{ willUpdateCount(count+1) }}>❤︎ 공감</span>
           <span className='heartCount'>{count}</span>
