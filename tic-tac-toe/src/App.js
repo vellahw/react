@@ -4,17 +4,40 @@ import './App.css';
 import Square from './components/Square';
 
 function App() {
+  const [xIsNext, setXIsNext] = useState(true); 
   const [squares, setSquares] = useState(Array(9).fill(null));
+
+  let winner = calculateWinner(squares);
+  let status;
+
+  if (winner) {
+    status = "Winner is " + winner;
+  } else {
+    status = 'Next Player is ' + (xIsNext ? 'X' : 'O');
+  }
 
   const handleClick = (i) => {
     const nextSquares = squares.slice();
-    nextSquares[i] = "X";
+    
+    // 이미 값이 있거나 승자가 나왔다먄 return
+    if (squares[i] || calculateWinner(squares)) {
+      return;
+    }
+
+    if (xIsNext) {
+      nextSquares[i] = 'X';
+    } else {
+      nextSquares[i] = 'O';
+    }
+
+    setXIsNext(!xIsNext);
     setSquares(nextSquares);
   }
 
 
   return (
     <>
+      <p>{status}</p>
       <div className="square-wrap">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)}></Square>
         <Square value={squares[1]} onSquareClick={() => handleClick(1)}></Square>
@@ -31,3 +54,28 @@ function App() {
 }
 
 export default App;
+
+const calculateWinner = (squares) => {
+  
+  // 빙고 라인
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ]
+
+  for (let i = 0; i < lines.length; i++) {
+    const [a, b, c] = lines[i];
+
+    if (squares[a] && squares[a] === squares[b] && squares[b] === squares[c] && squares[c]) {
+       return squares[a];
+    } 
+  }
+
+  return null;
+}
