@@ -1,0 +1,28 @@
+nav {
+  position: fixed;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+  width: 100%;
+  padding: 30px 40px;
+
+  z-index: 9;
+  mix-blend-mode: difference;
+
+  h1, li {
+    font-size: 28px;
+  }
+  
+  ul {
+    list-style: none;
+  
+    display: flex;
+  
+     & li {
+      margin-left: 40px;
+    }
+  }
+}

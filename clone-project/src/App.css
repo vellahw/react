@@ -1,0 +1,395 @@
+body {
+  background-color: #000;
+}
+
+* {
+  color: #fff;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+section {
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-btw {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ali-center {
+  align-items: center;
+}
+
+.dir-column {
+  flex-direction: column;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100vh {
+  height: 100vh;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  background-image: url('./img/soro/sec01-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0000008c;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  .visual-text {
+    text-align: center;
+    font-size: 13.9vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    letter-spacing: -15px;
+    z-index: 1;
+/* 
+    &.active {
+      transform: translateY(20%) !important;
+      transition: transform ease 0.4s;
+    } */
+
+    & span:nth-of-type(2) {
+      font-style:italic;
+    }
+  }
+
+  .rolling-text {
+    position: absolute;
+    right: 20px;
+    bottom: 300px;
+    text-transform: uppercase;
+    font-size: 24px;
+    z-index: 1;
+
+    .rotate {
+      position: relative;
+      height: 30px;
+
+      & li {
+        position: absolute;
+      
+        &:nth-of-type(n+2) {
+          opacity: 0;
+        }
+        
+        &:nth-of-type(1) {
+          animation: slide-out-bottom 0.5s ease-in both 0.9s;
+        }
+        &:nth-of-type(2) {
+          animation: slide-in-out-bottom 1s linear both 1s;
+        }
+        &:nth-of-type(3) {
+          animation: slide-in-out-bottom 1s linear both 1.5s;
+        }
+        &:nth-of-type(4) {
+          animation: slide-in-out-bottom 1s linear both 2s;
+        }
+        &:nth-of-type(5) {
+          animation: slide-in-out-bottom 1s linear both 2.5s;
+        }
+        &:nth-of-type(6) {
+          animation: slide-in-bottom 1s ease-out both 3s;
+        }
+      }
+    }
+    
+    & p:nth-of-type(2) {
+      margin-left: 30px;
+    }
+  }
+}
+
+@keyframes slide-out-bottom {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-out-bottom {
+  0% {
+    transform: translateY(-25px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+    
+  100% {
+    transform: translateY(25px);
+    opacity: 0;
+  }
+}
+
+
+
+.gallery .inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding: 40px;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  li {
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(30px);
+    background: rgba(18, 18, 18, 0.7);
+
+    .card {
+      position: relative;
+      margin: 0 auto;
+      height: 0;
+      padding-bottom: 120%;
+      overflow: hidden;
+      width: 100%;
+    }
+    
+    .img-container {
+      position: absolute;
+      left: 0;
+      top: -200px;
+      width: 100%;
+      height: 135%;
+      object-fit: cover;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .info {
+      margin: 20px 0;
+      font-size: 24px;
+      
+      .dis {
+        font-size: 16px;
+        color: #888;
+      }
+    }
+  }
+}
+
+.what-we-do {
+  font-size: 40px;
+  margin: 0 auto;
+  padding: 960px 40px 40px 40px;
+  height: fit-content;
+  transition: background-color ease 0.3s;
+  overflow: unset;
+
+  &.reached {
+    background-color: #fff;
+    color: #000;
+
+    & h1,
+    & span,
+    & p {
+      color: #000;
+    }
+  }
+
+  .title {
+    width: 40%;
+    font-weight: normal;
+
+    & span {
+      font-style: italic;
+    }
+  }
+
+  .article-wrap {
+    width: 60%;
+  }
+
+  .end-title {
+    font-size: 6.4vw;
+    font-weight: normal;
+    color: #000;
+    margin-top: 150px;
+    
+    & span {
+      font-style: italic;
+    }
+  }
+}
+
+.works {
+  overflow: unset;
+  height: fit-content;
+
+  .works-panel {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    top: 0 !important;
+
+    &[data-index="1"],
+    &[data-index="3"] {
+      background-image: url('./img/soro/works-item.jpg');
+    }
+    &[data-index="2"] {
+      background-image: url('./img/soro/works-item2.jpg');
+    }
+
+    &.kill {
+      position: relative !important;
+    }
+  }
+
+  .item-wrap { 
+    padding: 20px;
+
+  }
+  
+  .title-div {
+    height: 220px;
+    padding: 30px;
+    background-color: #ffffffd7;
+    border-radius: 10px;
+    align-items: flex-end;
+    
+    & p,
+    & div .flex,
+    & a {
+      width: calc(100% / 3);
+      color: #000;
+    }
+
+    .labels li {
+      width: fit-content;
+      padding: 4px 8px;
+      font-size: 13px;
+      border-radius: 50px;
+      background-color: #000;
+      color: #fff;
+      margin-right: 5px;
+    }
+    
+    .partner-name {
+      font-size: 50px;
+      font-weight: normal;
+      margin-top: 20px;
+      line-height: 1;
+      color: #000;
+      
+      & span {
+        vertical-align: top;
+        margin-left: 10px;
+        font-size: 14px;
+        font-weight: normal;
+        color: #999;
+      }
+    }
+    
+  }
+}
+
+.middle {
+  background-color: #000;
+
+  .rolling-text {
+    height: fit-content;
+    margin: 20px 0;
+    width: 100%;
+    overflow: hidden;
+
+    & div {
+      font-size: 5vw;
+      font-style: italic;
+      text-wrap: nowrap;
+      line-height: 1.1;
+      display: flex;
+      position: relative;
+      width: 3224px;
+
+      &.txt-top {
+        animation: moveToLeft 50s linear infinite;
+      }
+      &.txt-btm {
+        animation: moveToRight 50s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes moveToLeft {
+  0% {
+   transform: translate3d(0, 0, 0);
+  }
+  100% {
+   transform: translate3d(-3224px, 0, 0);
+  }
+}
+@keyframes moveToRight {
+  0% {
+      transform: translate3d(-3224px, 0, 0);
+    }
+  
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+}

@@ -35,7 +35,7 @@ button {
   }
 }
 
-.square-wrap {
+.game-board {
   display: flex;
   flex-wrap: wrap;
   
