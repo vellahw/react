@@ -1,0 +1,15 @@
+{
+	"Function Component": {
+	"prefix": "rfc",
+	"body": [
+		"export default function ${1:$TM_FILENAME_BASE} ($2) {",
+		"  return (",
+		"    <>",
+		"      <h1>${1:$TM_FILENAME_BASE} Component</h1>",
+		"    </>",
+		"  );",
+		"}",
+	],
+	"description": "Create an function component"
+},
+}
