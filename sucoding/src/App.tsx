@@ -1,4 +1,5 @@
 import PrintValue from "./components/PrintValue";
+import Button from "./components/ui/Button";
 import User from "./components/User";
 
 export default function App() {
@@ -26,7 +27,21 @@ export default function App() {
         handleClick={handleClick}
       />
       <hr />
+      {/* 스프레드 연산자 */}
       <User {...userObj} />
+      <hr />
+
+      <div>
+        <h1>children props</h1>
+        <Button>
+          <em>login</em>
+        </Button>
+        <Button>
+          <em>logout</em>
+        </Button>
+      </div>
+
+      <hr />
     </div>
   );
 }
