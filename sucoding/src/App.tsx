@@ -16,6 +16,14 @@ export default function App() {
     gender: "female",
   };
 
+  const handleClick2 = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    message: string,
+  ) => {
+    console.log(event);
+    alert(message);
+  };
+
   return (
     <div>
       <PrintValue
@@ -32,16 +40,9 @@ export default function App() {
       <hr />
 
       <div>
-        <h1>children props</h1>
-        <Button>
-          <em>login</em>
-        </Button>
-        <Button>
-          <em>logout</em>
-        </Button>
+        <h1>Event Object</h1>
+        <Button massage="message">onClick</Button>
       </div>
-
-      <hr />
     </div>
   );
 }
