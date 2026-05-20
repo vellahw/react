@@ -1,5 +1,6 @@
 import PrintValue from "./components/PrintValue";
 import Button from "./components/ui/Button";
+import MissonButton from "./components/ui/MissonButton";
 import User from "./components/User";
 
 export default function App() {
@@ -16,11 +17,7 @@ export default function App() {
     gender: "female",
   };
 
-  const handleClick2 = (
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>,
-    message: string,
-  ) => {
-    console.log(event);
+  const missonHandler = (message: string) => {
     alert(message);
   };
 
@@ -42,6 +39,14 @@ export default function App() {
       <div>
         <h1>Event Object</h1>
         <Button massage="message">onClick</Button>
+      </div>
+      <hr />
+
+      <div>
+        <h1>(미션) 버튼 컴포넌트 만들기</h1>
+        <MissonButton message="미션!" handler={() => missonHandler("미션!")}>
+          미션
+        </MissonButton>
       </div>
     </div>
   );
