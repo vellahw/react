@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function App() {
+export default function ObjectState() {
   const [userInfo, setUserInfo] = useState({
     name: "jack",
     age: 20,
