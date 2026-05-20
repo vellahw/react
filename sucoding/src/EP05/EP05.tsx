@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-export default function App() {
+export default function EP05() {
   const [state, setState] = useState<number>(0);
   const handleClick = () => {
     setState(10);
   };
 
   return (
-    <div>
+    <>
       <h1>useState</h1>
       <hr />
       <div>
@@ -16,6 +16,6 @@ export default function App() {
           Set to 10
         </button>
       </div>
-    </div>
+    </>
   );
 }
