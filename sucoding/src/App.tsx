@@ -1,23 +1,21 @@
 import { useState } from "react";
 
 export default function App() {
-  const [name, setName] = useState<string>("jack");
-  const [age, setAge] = useState<number>(20);
-  const [gender, setGender] = useState<"male" | "female">("male");
+  const [count, setCount] = useState(0);
 
   const handleClick = () => {
-    setName("hana");
-    setAge(28);
-    setGender("female");
+    // 상태 업데이트 함수
+    // 이전 값을 참조해서 값을 변경
+    setCount((count) => count + 1);
+    setCount((count) => count + 1);
+    setCount((count) => count + 1);
   };
   return (
     <>
-      <h1>Ep.04 Misson</h1>
+      <h1>Ep.05 함수형 업데이트 방식</h1>
       <hr />
       <div>
-        <p>name: {name}</p>
-        <p>age: {age}</p>
-        <p>gender: {gender}</p>
+        <p>count: {count}</p>
       </div>
 
       <button onClick={handleClick}>Update Profile</button>
