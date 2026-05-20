@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function App() {
+export default function Misson() {
   const [name, setName] = useState<string>("jack");
   const [age, setAge] = useState<number>(20);
   const [gender, setGender] = useState<"male" | "female">("male");
