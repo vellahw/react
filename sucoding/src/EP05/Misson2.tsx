@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function App() {
+export default function Misson2() {
   const [count, setCount] = useState(0);
 
   const handleIncrement = () => {
